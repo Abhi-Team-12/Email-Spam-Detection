@@ -28,6 +28,7 @@ def predictMessage(message):
     test_data = vectorizer.transform([message])
     prediction = model.predict(test_data)
     return "Spam" if prediction[0] == 1 else "Ham"
+    # return prediction
    
 
 def Home(request):
@@ -35,7 +36,7 @@ def Home(request):
     if request.method == 'POST':
         form = MessageForm(request.POST)
         if form.is_valid():
-            message = form.cleaned_data['text']
+            message = form.cleaned_data['Enter_your_mail']
             result = predictMessage(message)
     else:
         form = MessageForm()
