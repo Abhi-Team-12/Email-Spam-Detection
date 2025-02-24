@@ -1,4 +1,4 @@
 from django import forms
 
 class MessageForm(forms.Form):
-    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','placeholder':'Enter Your Email Messages here.. '}))
+    Enter_Your_mail  = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','placeholder':'Enter Your Email Messages here.. '}))
